@@ -1,0 +1,3 @@
+https://huggingface.co/blog/feed.xml
+https://news.ycombinator.com/rss
+https://rss.arxiv.org/atom/cs.AI

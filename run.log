@@ -1,0 +1,143 @@
+[debug] loaded_recent=75 filtered=50 max_items=120
+[debug] sample_kept:
+  - (26) PAACE: A Plan-Aware Automated Agent Context Engineering Framework
+  - (25) Codex is Open Sourcing AI models
+  - (18) V-Agent: An Interactive Video Search System Using Vision-Language Models
+  - (17) Reinforcement Learning for Self-Improving Agent with Skill Library
+  - (17) Accelerating Multi-modal LLM Gaming Performance via Input Prediction and Mishit Correction
+  - (17) Large Language Models as Pok\'emon Battle Agents: Strategic Play and Content Generation
+  - (17) Towards Explainable Conversational AI for Early Diagnosis with Large Language Models
+  - (16) MMRAG-RFT: Two-stage Reinforcement Fine-tuning for Explainable Multi-modal Retrieval-augmented Generation
+  - (16) New in llama.cpp: Model Management
+  - (16) We Got Claude to Fine-Tune an Open Source LLM
+[debug] items_blob_chars=21606 chunks=4 max_prompt_chars=6500
+[waiting evidence 1/4]  30.6s (no tokens yet)
+[progress evidence 1/4]  32.7s
+[progress evidence 1/4]  34.7s
+[progress evidence 1/4]  36.8s
+[progress evidence 1/4]  38.8s
+[progress evidence 1/4]  40.9s
+[progress evidence 1/4]  42.9s
+[progress evidence 1/4]  45.0s
+[progress evidence 1/4]  47.0s
+[progress evidence 1/4]  49.1s
+[progress evidence 1/4]  51.2s
+[progress evidence 1/4]  53.3s
+[progress evidence 1/4]  55.3s
+[done evidence 1/4]  57.0s chars=1076 done=True
+{"label": "evidence 1/4", "prompt_tokens": 1725, "output_tokens": 220, "total_s": 56.888897792}
+[waiting evidence 2/4]  23.2s (no tokens yet)
+[progress evidence 2/4]  25.4s
+[progress evidence 2/4]  27.5s
+[progress evidence 2/4]  29.5s
+[progress evidence 2/4]  31.6s
+[progress evidence 2/4]  33.6s
+[progress evidence 2/4]  35.7s
+[progress evidence 2/4]  37.7s
+[progress evidence 2/4]  39.8s
+[progress evidence 2/4]  41.9s
+[progress evidence 2/4]  44.0s
+[progress evidence 2/4]  46.1s
+[progress evidence 2/4]  48.1s
+[progress evidence 2/4]  50.2s
+[progress evidence 2/4]  52.3s
+[progress evidence 2/4]  54.4s
+[progress evidence 2/4]  56.4s
+[done evidence 2/4]  57.0s chars=800 done=True
+{"label": "evidence 2/4", "prompt_tokens": 1752, "output_tokens": 203, "total_s": 56.607218541}
+[waiting evidence 3/4]  17.9s (no tokens yet)
+[progress evidence 3/4]  20.0s
+[progress evidence 3/4]  22.1s
+[progress evidence 3/4]  24.2s
+[progress evidence 3/4]  26.3s
+[progress evidence 3/4]  28.4s
+[progress evidence 3/4]  30.4s
+[progress evidence 3/4]  32.6s
+[progress evidence 3/4]  34.6s
+[progress evidence 3/4]  36.7s
+[progress evidence 3/4]  38.8s
+[progress evidence 3/4]  40.9s
+[progress evidence 3/4]  43.0s
+[progress evidence 3/4]  45.0s
+[done evidence 3/4]  46.5s chars=918 done=True
+{"label": "evidence 3/4", "prompt_tokens": 1718, "output_tokens": 220, "total_s": 46.351995583}
+[waiting evidence 4/4]   5.3s (no tokens yet)
+[progress evidence 4/4]   7.3s
+[progress evidence 4/4]   9.4s
+[progress evidence 4/4]  11.5s
+[progress evidence 4/4]  13.5s
+[progress evidence 4/4]  15.6s
+[progress evidence 4/4]  17.6s
+[progress evidence 4/4]  19.8s
+[progress evidence 4/4]  21.8s
+[progress evidence 4/4]  23.9s
+[done evidence 4/4]  25.7s chars=821 done=True
+{"label": "evidence 4/4", "prompt_tokens": 689, "output_tokens": 176, "total_s": 25.573119541}
+[debug] starting final report…
+[waiting final]  14.4s (no tokens yet)
+[progress final]  16.5s
+[progress final]  18.6s
+[progress final]  20.8s
+[progress final]  22.8s
+[progress final]  24.9s
+[progress final]  27.0s
+[progress final]  29.1s
+[progress final]  31.2s
+[progress final]  33.3s
+[progress final]  35.4s
+[progress final]  37.5s
+[progress final]  39.6s
+[progress final]  41.6s
+[progress final]  43.7s
+[progress final]  45.8s
+[progress final]  47.9s
+[progress final]  50.0s
+[progress final]  52.0s
+[progress final]  54.1s
+[progress final]  56.2s
+[progress final]  58.2s
+[progress final]  60.3s
+[progress final]  62.4s
+[progress final]  64.5s
+[progress final]  66.5s
+[progress final]  68.6s
+[progress final]  70.7s
+[progress final]  72.8s
+[progress final]  74.9s
+[progress final]  77.0s
+[progress final]  79.0s
+[progress final]  81.2s
+[progress final]  83.2s
+[progress final]  85.3s
+[progress final]  87.4s
+[progress final]  89.4s
+[progress final]  91.5s
+[progress final]  93.5s
+[progress final]  95.6s
+[progress final]  97.8s
+[progress final]  99.8s
+[progress final] 101.9s
+[progress final] 104.0s
+[progress final] 106.1s
+[progress final] 108.2s
+[progress final] 110.3s
+[progress final] 112.5s
+[progress final] 114.6s
+[progress final] 116.7s
+[progress final] 118.8s
+[progress final] 120.9s
+[progress final] 123.0s
+[progress final] 125.1s
+[progress final] 127.2s
+[progress final] 129.3s
+[progress final] 131.4s
+[progress final] 133.5s
+[progress final] 135.7s
+[progress final] 137.8s
+[progress final] 139.8s
+[progress final] 141.8s
+[progress final] 144.0s
+[progress final] 146.0s
+[done final] 146.5s chars=4183 done=True
+{"label": "final", "prompt_tokens": 1264, "output_tokens": 900, "total_s": 146.005115541}
+[debug] finished (report written to digest.md)
