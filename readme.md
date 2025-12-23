@@ -51,5 +51,6 @@ The code was written by ChatGPT.
 The goal for future is to run phi4-mini 24/7 on a server for at least 3 weeks, going through 21,000 of articles, and extracting pre-structured data. Then analyzing the data to get insights about:
 1) pain points and solutions
 2) tool X is good for A, tool Y is better for B
+
 in AI industry, and more specifically,
 in RAGs and in running SLMs/LLMs locally/on a server.
