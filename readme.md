@@ -54,3 +54,17 @@ The goal for future is to run phi4-mini 24/7 on a server for at least 3 weeks, g
 
 in AI industry, and more specifically,
 in RAGs and in running SLMs/LLMs locally/on a server.
+
+## What you need to run it 
+
+Have phi4-mini running with ollama in the background. It's a 3.8B model, can run on a 8GB RAM Macbook M1 Air.
+
+Command:
+
+```python
+python3 -u feed_into_phi.py \
+  --days 90 --last-n 300 --max-items 120 \
+  --snippet-chars 260 --max-prompt-chars 6500 \
+  --num-predict-chunk 220 --num-predict-final 900 \
+  --debug 2> run.log
+```
