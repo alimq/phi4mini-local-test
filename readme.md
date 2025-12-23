@@ -1,3 +1,5 @@
+## What this is
+
 Below is the output of a phi4-mini on 300 articles over the last 90 days in a few RSS feeds.
 
 ## Direction of AI
