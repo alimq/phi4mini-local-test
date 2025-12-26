@@ -18,9 +18,14 @@ log() { echo "[$(ts)] $*"; }
 
 export PYTHONUNBUFFERED=1
 
+# 24/7 loop:
+#   1) Scrape feeds -> /var/lib/phi4mini/outbox.jsonl
+#   2) Summarize new items -> /var/lib/phi4mini/digest.md
+#   3) Use the old 15-minute "sleep" window to maintain the global RAG index.
+
 while true; do
   log "scraper start"
-  # 1) Scrape feeds -> append new items to outbox, update seen.sqlite
+  # 1) Scrape feeds -> append new items to outbox.jsonl, update seen.sqlite
   $PY -u $CODE/copied_scraper.py \
     --feeds-file $DATA/feeds.txt \
     --out $DATA/outbox.jsonl \
@@ -49,7 +54,16 @@ while true; do
     || { log "[warn] feed_into_phi failed; sleeping 120s"; sleep 120; continue; }
   log "digest end"
 
-  # 3) Sleep 15 minutes
-  log "sleep 900s"
-  sleep 900
+  # 3) Maintain the global RAG index for up to 900 seconds.
+  #    If embeddings are unavailable, the indexer still keeps SQLite FTS up-to-date.
+  log "rag_index start budget_s=900"
+  $PY -u $CODE/rag_index_outbox.py \
+    --outbox $DATA/outbox.jsonl \
+    --db $DATA/rag.sqlite \
+    --state-db $DATA/rag.sqlite \
+    --cursor-key outbox_offset_bytes \
+    --max-seconds 900 \
+    --log-level INFO \
+    || { log "[warn] rag_index_outbox failed; sleeping 900s"; sleep 900; }
+  log "rag_index end"
 done
