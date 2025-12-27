@@ -1,91 +1,120 @@
-## What this is
+# phi4mini-local-test
 
-Below is the output of a phi4-mini on 300 articles over the last 90 days in a few RSS feeds.
+Local, always-on news summarizer + RAG stack built around phi4-mini and Ollama. It scrapes RSS feeds, generates a digest, and keeps a lightweight SQLite RAG index you can query through a simple web UI.
 
-## Direction of AI
+## What the website does
 
-AI is increasingly focusing on fine-tuning large language models like LLMs and RAG systems for specific tasks, such as pokémon battles or early diagnosis [RAG]. The ability to dynamically switch between multiple local model instances without restarting can significantly improve efficiency in resource-constrained scenarios (llamacpp server mode) [LOCAL]. Reinforcement learning techniques are being used not only within AI but also applied externally by humans and other agents for tasks like explainable multi-modal retrieval, which could enhance the interpretability of complex models across various applications such as healthcare systems or gaming performance. V-Agent's integration platform is pushing boundaries in combining vision-language capabilities locally without relying on cloud services [AGENTS]. Cost-efficient multimodal LLMs are achieving state-of-the-art (SOTA) results even when deployed at smaller scales, indicating a trend towards more efficient and scalable AI solutions for local deployment scenarios.
+There are two lightweight web experiences that make the output easy to browse:
 
-## Trend map with evidence
+- Summarizer view: renders the latest digest markdown as a readable page (with a raw markdown download).
+- Global RAG: ask questions over everything that has been ingested into the outbox (with sources).
+- User-docs RAG: upload your own files and ask questions over them in a per-user namespace.
 
-1. **Fine-tuning Efficiency**
-   - Large language models like Apriel-1.6 achieve SOTA performance efficiently.
-     [EVAL] apriel-1.6-15b-thinker demonstrates cost-efficient multimodal performance, achieving SOTA against larger models (https://huggingface.co/blog/ServiceNow-AI/apriel-1p6-15b-thinker).
-   - Lightweight math reasoning agents are becoming more efficient.
-     [EVAL] DeepMath's lightweight math reasoning agent fine-tuned with GrPo shows efficiency in specialized tasks.
+If you only want one page to show a friend, point them at the Summarizer or the Global RAG UI. They complement each other: the Summarizer gives a daily/weekly narrative, and the RAG UI answers ad-hoc questions with sources.
 
-2. **Dynamic Model Switching**
-   - Llama.cpp server mode allows dynamic switching between models without restarting, enhancing local deployment scenarios' resource management and cost-efficiency (https://huggingface.co/blog/ggml-org/model-management-in-llamacpp).
+## RAG focus (how it works)
 
-3. **Reinforcement Learning Integration**
-   - Reinforcement learning is being used to fine-tune LLMs for explainable multi-modal retrieval.
-     [EVAL] Reinforcement learning improves the interpretability of complex models in real-world applications (https://arxiv.org/abs/2512.17194).
+This repo keeps RAG intentionally simple and local:
 
-4. **Local Model Deployment and Efficiency**
-   - Smaller, efficient edge devices like Granite 4.0 Nano excel at on-device AI tasks due to their compact size.
-     [EVAL] Granite 4.0 Nano models are excelling in edge applications (https://huggingface.co/blog/ibm-granite/granite-4-nano).
-   - Continuous batching optimizes throughput for local RAG systems like qwen and claude, enhancing performance efficiency.
+- Storage: SQLite (`rag.sqlite`) plus FTS5 for fast keyword retrieval.
+- Embeddings: optional embedding rerank using Ollama (`nomic-embed-text` by default).
+- Graph signals: optional GraphRAG-style entity expansion (toggle via `PHI4MINI_GRAPH_ENABLED`).
+- Outputs: answers + source links for the global news corpus, or answers + local file paths for user uploads.
 
-5. **Multilingual & Long-form ASR Models**
-   - Trend analysis shows an increase in multilingual models capable of handling long forms.
-     [LOCAL] Local LLMs may struggle with new tracks; consider specialized tools (https://arxiv.org/abs/2512.16953).
+The result is a fast, low-dependency RAG system that runs on a small server without external vector DBs.
 
-6. **Specialized Tools for New Tracks and Low-resource Settings**
-   - Specialized pattern matching algorithms like Ukkonen's can optimize text search efficiency in RAG systems.
-     [TOOLING] Ukkonen offers a novel approach to optimizing text searches (https://arxiv.org/abs/2512.16953).
+## Pipeline overview
 
-## Weekly watchlist
+The 24/7 loop is:
 
-1. **Apriel-1p6 Model Updates**: Monitor updates for cost-efficient multimodal performance improvements, as they could directly impact RAG efficiency.
-   - https://huggingface.co/blog/ServiceNow-AI/apriel-1p6-15b-thinker
-2. **llamacpp Server Mode Enhancements**: Keep an eye on any new features or optimizations that can further improve dynamic model switching for local deployments (unclear).
-3. **Reinforcement Learning in LLMs**: Track advancements as they could lead to more interpretable RAG systems.
-   - https://arxiv.org/abs/2512.17194
-4. **Granite 4 Nano Model Performance Metrics**: New benchmarks or use cases for on-device applications can provide insights into deploying smaller models locally (unclear).
-5. **Continuous Batching Techniques in qwen and claude RAG systems**: Any new optimizations could significantly impact local model performance.
-   - https://huggingface.co/blog/continuous_batching
-6. **Multilingual & Long-form ASR Models Trends**: Understanding the evolution of these models can help prepare for integrating them into existing workflows (unclear).
+1) Scrape RSS feeds into `/var/lib/phi4mini/outbox.jsonl`
+2) Summarize new items into `/var/lib/phi4mini/digest.md`
+3) Maintain the global RAG index in `/var/lib/phi4mini/rag.sqlite`
 
-##
+The wrapper script for this is `run_loop.sh`.
 
-The code was written by ChatGPT.
+## Quickstart
 
-The goal for future is to run phi4-mini 24/7 on a server for at least 3 weeks, going through 21,000 of articles, and extracting pre-structured data. Then analyzing the data to get insights about:
-1) pain points and solutions
-2) tool X is good for A, tool Y is better for B
+Prereqs:
+- Ollama running locally
+- `phi4-mini:latest` model pulled
+- `nomic-embed-text` pulled (for embeddings; optional but recommended)
 
-in AI industry, and more specifically,
-in RAGs and in running SLMs/LLMs locally/on a server.
+Setup:
 
-## What you need to run it 
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+```
 
-Have phi4-mini running with ollama in the background. It's a 3.8B model, can run on a 8GB RAM Macbook M1 Air.
+Run a one-off digest:
 
-Command:
-
-```python
+```bash
 python3 -u feed_into_phi.py \
   --days 90 --last-n 300 --max-items 120 \
   --snippet-chars 260 --max-prompt-chars 6500 \
-  --num-predict-chunk 220 --num-predict-final 900 \
-  --debug 2> run.log
+  --num-predict-chunk 220 --num-predict-final 900
 ```
 
----
+Run the continuous loop:
 
-## Historical backfill beyond RSS
+```bash
+bash run_loop.sh
+```
 
-This bundle includes an optional continuous backfill service that discovers URLs via sitemaps and appends extracted articles into your outbox.
+## Web UIs
 
-See `BACKFILL.md`.
+Summarizer (HTML digest):
 
-## GraphRAG vs BM25 Evaluation (Dec 2025)
+```bash
+python3 web/serve_digest.py
+```
 
-- Dataset: AI news chunks (title-heavy, proper-noun dense)
-- Query set: manually labeled
-- Key metrics (real labeled run):
-  - recall@20: GraphRAG 0.5033 vs BM25 0.6500
-  - MRR: GraphRAG 0.4639 vs BM25 0.5372
-- Conclusion: BM25 outperformed GraphRAG in this setup
+Or, if you prefer FastAPI:
 
-See: docs/graphrag_eval/report.md (or eval/graphrag_eval/report.md)
+```bash
+uvicorn summarizer_web:app --host 0.0.0.0 --port 8088
+```
+
+Global RAG (news corpus):
+
+```bash
+uvicorn rag_server:app --host 0.0.0.0 --port 8090
+```
+
+User-docs RAG (upload your own files):
+
+```bash
+uvicorn rag_user_server:app --host 0.0.0.0 --port 8091
+```
+
+## Useful endpoints
+
+Global RAG:
+- `GET /` UI
+- `GET /api/ask?q=...` JSON response
+- `GET /debug/retrieval?q=...` retrieval metadata
+
+User-docs RAG:
+- `GET /` upload + ask UI
+- `POST /upload` upload file
+- `GET /api/ask?user_id=...&q=...` JSON response
+
+## Configuration (common env vars)
+
+- `OLLAMA_GENERATE_URL` (default `http://127.0.0.1:11434/api/generate`)
+- `OLLAMA_EMBED_URL` (default `http://127.0.0.1:11434/api/embeddings`)
+- `OLLAMA_GEN_MODEL` (default `phi4-mini:latest`)
+- `OLLAMA_EMBED_MODEL` (default `nomic-embed-text`)
+- `PHI4MINI_RAG_DB` (default `/var/lib/phi4mini/rag.sqlite`)
+- `PHI4MINI_DIGEST_MD` (default `/var/lib/phi4mini/digest.md`)
+
+## Historical notes
+
+- Optional backfill from sitemaps is documented in `BACKFILL.md`.
+- GraphRAG vs BM25 eval (Dec 2025): BM25 outperformed GraphRAG on the test set. See `eval/graphrag_eval/report.md`.
+
+## Data locations
+
+Runtime data lives in `/var/lib/phi4mini`. The repo only contains code and docs; generated artifacts should not be committed.
