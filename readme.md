@@ -78,3 +78,14 @@ python3 -u feed_into_phi.py \
 This bundle includes an optional continuous backfill service that discovers URLs via sitemaps and appends extracted articles into your outbox.
 
 See `BACKFILL.md`.
+
+## GraphRAG vs BM25 Evaluation (Dec 2025)
+
+- Dataset: AI news chunks (title-heavy, proper-noun dense)
+- Query set: manually labeled
+- Key metrics (real labeled run):
+  - recall@20: GraphRAG 0.5033 vs BM25 0.6500
+  - MRR: GraphRAG 0.4639 vs BM25 0.5372
+- Conclusion: BM25 outperformed GraphRAG in this setup
+
+See: docs/graphrag_eval/report.md (or eval/graphrag_eval/report.md)
