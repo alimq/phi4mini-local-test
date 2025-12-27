@@ -21,8 +21,6 @@ Where the benchmark lives:
 
 - `eval/graphrag_eval/report.md`
 
-The eval data is included in the repo. It is also present locally on this machine.
-
 ## Brief project context
 
 - Summarizer: renders the latest digest as a small website.
@@ -30,3 +28,11 @@ The eval data is included in the repo. It is also present locally on this machin
 - User-docs RAG: upload files and ask questions over them.
 
 That is it. The rest of this repo exists to support the benchmark and the digest pipeline.
+
+## Example questions to test retrieval
+
+Try queries that are heavy on proper nouns and titles. This is where BM25 shines.
+
+- "What did Anthropic ship last week related to Claude?"
+- "Which OpenAI paper mentioned distillation in December?"
+- "What are the key claims in the new Gemini model update?"
