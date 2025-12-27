@@ -2,6 +2,23 @@
 
 Small local project that turns RSS feeds into a digest and lets you query the same data through a simple RAG UI.
 
+## Benchmark note (retrieval)
+
+In this repo’s AI-news retrieval benchmark, BM25 scored higher than GraphRAG on these retrieval metrics under this setup.
+
+BM25 vs GraphRAG (mean over labeled queries; delta = GraphRAG - BM25):
+- recall@10: 0.6417 vs 0.5033 (delta -0.1383)
+- recall@20: 0.6500 vs 0.5033 (delta -0.1467)
+- MRR: 0.5372 vs 0.4639 (delta -0.0733)
+- nDCG@10: 0.5659 vs 0.4611 (delta -0.1048)
+- precision@10: 0.1100 vs 0.0833 (delta -0.0267)
+
+Run context (from `eval/graphrag_eval/RUN.md`):
+- `--topk 20`
+- The corpus file `corpus.jsonl` is not committed
+
+Query set used: `eval/graphrag_eval/queries_labeled.json` (30 labeled queries).
+
 ## Benchmark: GraphRAG vs BM25 on AI news
 
 This repo includes a retrieval benchmark comparing GraphRAG vs BM25.
