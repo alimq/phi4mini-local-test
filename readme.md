@@ -36,3 +36,15 @@ These are real queries from `queries_labeled.json` in `eval/graphrag_eval`:
 - "What is Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints about?"
 - "What is the significance of Train 400x faster Static Embedding Models with Sentence Transformers in AI?"
 - "What did researchers say about Welcome Mixtral - a SOTA Mixture of Experts on Hugging Face?"
+
+Results for those exact queries (from `eval/graphrag_eval/report.json`):
+
+- "Powerful ASR + diarization + speculative decoding..."
+  - BM25: recall@20 1.0, MRR 1.0
+  - GraphRAG: recall@20 0.5, MRR 1.0
+- "Train 400x faster Static Embedding Models..."
+  - BM25: recall@20 1.0, MRR 1.0
+  - GraphRAG: recall@20 1.0, MRR 1.0
+- "Welcome Mixtral - a SOTA Mixture of Experts..."
+  - BM25: recall@20 1.0, MRR 0.25
+  - GraphRAG: recall@20 0.0, MRR 0.0
