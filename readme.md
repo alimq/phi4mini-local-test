@@ -2,6 +2,11 @@
 
 Small local project that turns RSS feeds into a digest and lets you query the same data through a simple RAG UI.
 
+## Try it (live)
+
+Summarizer UI: http://46.224.80.50/summarizer/
+RAG UI: http://46.224.80.50/rag/
+
 ## Benchmark note (retrieval)
 
 In this repo’s AI-news retrieval benchmark, BM25 scored higher than GraphRAG on these retrieval metrics under this setup.
