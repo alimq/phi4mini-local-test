@@ -4,8 +4,8 @@ Small local project that turns RSS feeds into a digest and lets you query the sa
 
 ## Try it (live)
 
-- Summarizer UI: http://46.224.80.50/summarizer/
-- RAG UI: http://46.224.80.50/rag/
+- Summarizer UI: [Open summarizer](http://46.224.80.50/summarizer/)
+- RAG UI: [Open RAG UI](http://46.224.80.50/rag/)
 
 ## Benchmark note (retrieval)
 
