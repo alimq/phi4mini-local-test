@@ -4,7 +4,7 @@ set -euo pipefail
 # Installs a small web UI for /var/lib/phi4mini/digest.md on ports 80/443.
 # Safe to run multiple times.
 
-WEB_DIR="/opt/phi4mini/web"
+WEB_DIR="/opt/phi4mini/app/web"
 VENV_DIR="$WEB_DIR/.venv"
 NGINX_SITE_AVAIL="/etc/nginx/sites-available/phi4mini-digest"
 NGINX_SITE_ENABLED="/etc/nginx/sites-enabled/phi4mini-digest"

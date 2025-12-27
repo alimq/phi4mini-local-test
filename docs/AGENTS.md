@@ -1,18 +1,18 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- Root-level Python scripts drive the pipeline: scraping (`copied_scraper.py`), summarization (`feed_into_phi.py`), RAG indexing/serving (`rag_index_outbox.py`, `rag_server.py`, `rag_user_server.py`), and utilities (`rag_db.py`, `summarizer_web.py`).
-- Historical backfill lives in `backfill_discover.py`, `backfill_worker.py`, and the wrapper loop `backfill_loop.sh`.
-- Web UI lives under `web/` (`web/serve_digest.py`, `web/requirements-web.txt`).
-- Ops scripts and docs: `run_loop.sh`, `setup_web.sh`, `BACKFILL.md`, `DEPLOY_NOTES.md`, `readme.md`.
+- Pipeline scripts live in `app/` (scraper, summarizer, RAG index/servers, and utilities like `rag_db.py`).
+- Historical backfill lives in `app/backfill_discover.py`, `app/backfill_worker.py`, and the wrapper loop `ops/backfill_loop.sh`.
+- Web UI lives under `app/web/` (`app/web/serve_digest.py`, `app/web/requirements-web.txt`).
+- Ops scripts and docs: `ops/run_loop.sh`, `ops/setup_web.sh`, `docs/BACKFILL.md`, `docs/DEPLOY_NOTES.md`, `readme.md`.
 
 ## Build, Test, and Development Commands
 - Install Python deps (local dev): `python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt`.
 - Run a one-off digest (example from `readme.md`):
-  `python3 -u feed_into_phi.py --days 90 --last-n 300 --max-items 120 --snippet-chars 260 --max-prompt-chars 6500`.
-- Run the continuous loop: `bash run_loop.sh` (scrape -> digest -> RAG index; writes to `/var/lib/phi4mini`).
-- Run backfill continuously: `bash backfill_loop.sh` (uses `/var/lib/phi4mini/seen.sqlite`).
-- Local web preview: `python3 web/serve_digest.py` (serves `/var/lib/phi4mini/digest.md` on port 8088 by default). For full nginx setup, see `setup_web.sh`.
+  `PYTHONPATH=. python3 -u -m app.feed_into_phi --days 90 --last-n 300 --max-items 120 --snippet-chars 260 --max-prompt-chars 6500`.
+- Run the continuous loop: `bash ops/run_loop.sh` (scrape -> digest -> RAG index; writes to `/var/lib/phi4mini`).
+- Run backfill continuously: `bash ops/backfill_loop.sh` (uses `/var/lib/phi4mini/seen.sqlite`).
+- Local web preview: `python3 app/web/serve_digest.py` (serves `/var/lib/phi4mini/digest.md` on port 8088 by default). For full nginx setup, see `ops/setup_web.sh`.
 
 ## Coding Style & Naming Conventions
 - Python uses 4-space indentation and snake_case; match existing lightweight, script-style modules.
@@ -28,4 +28,4 @@
 
 ## Configuration & Ops Notes
 - Runtime data lives under `/var/lib/phi4mini`; do not commit generated artifacts.
-- Systemd units and nginx config are referenced in `DEPLOY_NOTES.md` and `web/README_WEB.md`; web installs use a self-signed cert by default.
+- Systemd units and nginx config are referenced in `docs/DEPLOY_NOTES.md` and `app/web/README_WEB.md`; web installs use a self-signed cert by default.

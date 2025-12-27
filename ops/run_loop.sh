@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PY=/opt/phi4mini/.venv/bin/python
-CODE=/opt/phi4mini
+ROOT=/opt/phi4mini
 DATA=/var/lib/phi4mini
 
 mkdir -p "$DATA"
@@ -26,8 +26,8 @@ export PYTHONUNBUFFERED=1
 while true; do
   log "scraper start"
   # 1) Scrape feeds -> append new items to outbox.jsonl, update seen.sqlite
-  $PY -u $CODE/copied_scraper.py \
-    --feeds-file $DATA/feeds.txt \
+  PYTHONPATH="$ROOT" $PY -u -m app.copied_scraper \
+    --feeds-file $ROOT/config/feeds.txt \
     --out $DATA/outbox.jsonl \
     --db $DATA/seen.sqlite \
     --max-items 20 \
@@ -38,7 +38,7 @@ while true; do
   # 2) Generate digest (append per run) using local Ollama model
   log "digest start"
   cd "$DATA"
-  $PY -u $CODE/feed_into_phi.py \
+  PYTHONPATH="$ROOT" $PY -u -m app.feed_into_phi \
     --outbox $DATA/outbox.jsonl \
     --state-db $DATA/seen.sqlite \
     --cursor-key outbox_offset_bytes \
@@ -57,7 +57,7 @@ while true; do
   # 3) Maintain the global RAG index for up to 900 seconds.
   #    If embeddings are unavailable, the indexer still keeps SQLite FTS up-to-date.
   log "rag_index start budget_s=900"
-  $PY -u $CODE/rag_index_outbox.py \
+  PYTHONPATH="$ROOT" $PY -u -m app.rag_index_outbox \
     --outbox $DATA/outbox.jsonl \
     --db $DATA/rag.sqlite \
     --state-db $DATA/rag.sqlite \

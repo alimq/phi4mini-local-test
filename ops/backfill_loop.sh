@@ -7,8 +7,9 @@ DB="${DB:-$DATA_DIR/seen.sqlite}"
 LOG="${LOG:-$DATA_DIR/backfill.log}"
 
 # Prefer the project venv, fallback to system python3 if venv missing.
-if [[ -x "/opt/phi4mini/.venv/bin/python" ]]; then
-  PY="/opt/phi4mini/.venv/bin/python"
+ROOT="/opt/phi4mini"
+if [[ -x "$ROOT/.venv/bin/python" ]]; then
+  PY="$ROOT/.venv/bin/python"
 else
   PY="${PY:-python3}"
 fi
@@ -55,7 +56,7 @@ while true; do
       log "INFO: backlog NEW=$new_count >= cap=$DISCOVER_MAX_NEW, skipping discovery this cycle"
     else
       log "INFO: discovery start (NEW=$new_count cap=$DISCOVER_MAX_NEW)"
-      if "$PY" /opt/phi4mini/backfill_discover.py \
+      if PYTHONPATH="$ROOT" "$PY" -m app.backfill_discover \
           --data-dir "$DATA_DIR" \
           --db "$DB"; then
         log "INFO: discovery done"
@@ -68,7 +69,7 @@ while true; do
 
   # Worker (runs every minute by default)
   log "INFO: worker start (batch=$WORK_BATCH)"
-  if "$PY" /opt/phi4mini/backfill_worker.py \
+  if PYTHONPATH="$ROOT" "$PY" -m app.backfill_worker \
         --data-dir "$DATA_DIR" \
         --db "$DB" \
         --outbox "$DATA_DIR/outbox.jsonl" \

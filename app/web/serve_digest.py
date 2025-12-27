@@ -260,7 +260,7 @@ class DigestHandler(BaseHTTPRequestHandler):
 
         warn = "" if MARKDOWN_OK else (
             "<div class='warn'>Python package <code>markdown</code> is not installed; "
-            "showing plain text. Run <code>/opt/phi4mini/setup_web.sh</code>.</div>"
+            "showing plain text. Run <code>/opt/phi4mini/ops/setup_web.sh</code>.</div>"
         )
 
         # Latest (default)

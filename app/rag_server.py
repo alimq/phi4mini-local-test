@@ -16,7 +16,7 @@ from requests import exceptions as requests_exceptions
 from fastapi import FastAPI, Form, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 
-from rag_db import (
+from app.rag_db import (
     ChunkHit,
     ensure_db,
     fts_search,

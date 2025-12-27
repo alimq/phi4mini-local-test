@@ -34,7 +34,7 @@ This keeps your pipeline *moving forward* through history even when RSS stops.
 
 ## Always-on sources (built in)
 
-Even if your `feeds.txt` is small, discovery also includes a curated set of AI-heavy domains
+Even if your `config/feeds.txt` is small, discovery also includes a curated set of AI-heavy domains
 by default (you can disable this).
 
 Built-in sitemap seeds include:

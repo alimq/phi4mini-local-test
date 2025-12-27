@@ -12,7 +12,7 @@ import requests
 from fastapi import FastAPI, File, Form, Query, UploadFile
 from fastapi.responses import HTMLResponse, JSONResponse
 
-from rag_db import (
+from app.rag_db import (
     ensure_db,
     init_conn,
     insert_chunk,

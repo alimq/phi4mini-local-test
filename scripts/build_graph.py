@@ -11,7 +11,13 @@ from typing import Dict, Iterable, List, Tuple
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from rag_db import (
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from app.rag_db import (
     ensure_db,
     get_or_create_entity,
     init_conn,

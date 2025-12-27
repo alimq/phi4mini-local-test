@@ -37,7 +37,7 @@ log_format main '$remote_addr - $remote_user [$time_local] "$request" '
 ```
 
 ## Nginx Proxy Settings
-Use `nginx_snippet_rag.conf` for timeouts and buffering. Then:
+Use `ops/nginx_snippet_rag.conf` for timeouts and buffering. Then:
 
 ```bash
 sudo nginx -t

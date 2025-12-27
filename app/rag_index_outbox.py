@@ -12,7 +12,7 @@ from typing import Dict, List, Optional, Tuple
 
 import requests
 
-from rag_db import (
+from app.rag_db import (
     init_state_db,
     insert_chunk,
     get_chunk_id,

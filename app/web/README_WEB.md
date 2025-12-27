@@ -7,7 +7,7 @@ This adds a tiny local web service that renders `/var/lib/phi4mini/digest.md` to
 Run as root:
 
 ```bash
-sudo /opt/phi4mini/setup_web.sh
+sudo /opt/phi4mini/ops/setup_web.sh
 ```
 
 Then visit:
@@ -17,7 +17,7 @@ Then visit:
 
 ## Files
 
-- Web server: `/opt/phi4mini/web/serve_digest.py`
+- Web server: `/opt/phi4mini/app/web/serve_digest.py`
 - Systemd unit: `/etc/systemd/system/phi4mini-web.service`
 - Nginx site: `/etc/nginx/sites-available/phi4mini-digest`
 
