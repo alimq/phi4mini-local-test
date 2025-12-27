@@ -29,10 +29,10 @@ Where the benchmark lives:
 
 That is it. The rest of this repo exists to support the benchmark and the digest pipeline.
 
-## Example questions to test retrieval
+## Example questions from the benchmark set
 
-Try queries that are heavy on proper nouns and titles. This is where BM25 shines.
+These are real queries from `queries_labeled.json` in `eval/graphrag_eval`:
 
-- "What did Anthropic ship last week related to Claude?"
-- "Which OpenAI paper mentioned distillation in December?"
-- "What are the key claims in the new Gemini model update?"
+- "What is Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints about?"
+- "What is the significance of Train 400x faster Static Embedding Models with Sentence Transformers in AI?"
+- "What did researchers say about Welcome Mixtral - a SOTA Mixture of Experts on Hugging Face?"
