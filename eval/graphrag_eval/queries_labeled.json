@@ -1,0 +1,177 @@
+[
+  {
+    "query": "What is Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints about?",
+    "gold_ids": [
+      "6066",
+      "6070"
+    ]
+  },
+  {
+    "query": "What are the main points in Correspondence Between Don Knuth and Peter van Emde Boas on Priority Deques 1977 [pdf]?",
+    "gold_ids": []
+  },
+  {
+    "query": "What did the article on Training and Finetuning Sparse Embedding Models with Sentence Transformers v5 report?",
+    "gold_ids": [
+      "3920",
+      "3297",
+      "3319",
+      "3299"
+    ]
+  },
+  {
+    "query": "What is the significance of Train 400x faster Static Embedding Models with Sentence Transformers in AI?",
+    "gold_ids": [
+      "4559"
+    ]
+  },
+  {
+    "query": "What problem does Granite 4.0 Nano: Just how small can you go? address?",
+    "gold_ids": [
+      "2040",
+      "2041",
+      "2042"
+    ]
+  },
+  {
+    "query": "What are the key details about Correspondence Between Don Knuth and Peter van Emde Boas on Priority Deques 1977 [pdf]?",
+    "gold_ids": []
+  },
+  {
+    "query": "How does Correspondence Between Don Knuth and Peter van Emde Boas on Priority Deques 1977 [pdf] work?",
+    "gold_ids": []
+  },
+  {
+    "query": "What is the update regarding Project Dropstone: A Neuro-Symbolic Runtime for Long-Horizon Engineering [pdf]?",
+    "gold_ids": []
+  },
+  {
+    "query": "Why is ChainReaction: Causal Chain-Guided Reasoning for Modular and Explainable Causal-Why Video Question Answering important?",
+    "gold_ids": [
+      "8827"
+    ]
+  },
+  {
+    "query": "What did researchers say about Welcome Mixtral - a SOTA Mixture of Experts on Hugging Face?",
+    "gold_ids": [
+      "6818"
+    ]
+  },
+  {
+    "query": "What is Correspondence Between Don Knuth and Peter van Emde Boas on Priority Deques 1977 [pdf] about?",
+    "gold_ids": []
+  },
+  {
+    "query": "What are the main points in Project Dropstone: A Neuro-Symbolic Runtime for Long-Horizon Engineering [pdf]?",
+    "gold_ids": []
+  },
+  {
+    "query": "What did the article on Remote VAEs for decoding with Inference Endpoints \ud83e\udd17 report?",
+    "gold_ids": [
+      "4159"
+    ]
+  },
+  {
+    "query": "What is the significance of Geometric Algorithms for Translucency Sorting in Minecraft [pdf] in AI?",
+    "gold_ids": []
+  },
+  {
+    "query": "What problem does Learning Treatment Policies From Multimodal Electronic Health Records address?",
+    "gold_ids": [
+      "3999"
+    ]
+  },
+  {
+    "query": "What are the key details about \"She's Like a Person but Better\": Characterizing Companion-Assistant Dynamics in Human-AI Relationships?",
+    "gold_ids": [
+      "4265"
+    ]
+  },
+  {
+    "query": "How does WWDC 24: Running Mistral 7B with Core ML work?",
+    "gold_ids": [
+      "5605",
+      "5600",
+      "5611",
+      "5599"
+    ]
+  },
+  {
+    "query": "What is the update regarding Rocket Money x Hugging Face: Scaling Volatile ML Models in Production\u200b?",
+    "gold_ids": [
+      "7105",
+      "7103"
+    ]
+  },
+  {
+    "query": "Why is Fabrice Bellard: Biography [pdf] important?",
+    "gold_ids": []
+  },
+  {
+    "query": "What did researchers say about Welcome aMUSEd: Efficient Text-to-Image Generation?",
+    "gold_ids": [
+      "6740"
+    ]
+  },
+  {
+    "query": "What is A Knapsack Public Key Cryptosystem Based on Arithmetic in Finite Fields (1988) [pdf] about?",
+    "gold_ids": [
+      "12252"
+    ]
+  },
+  {
+    "query": "What are the main points in NVIDIA Nemotron 3: Efficient and Open Intelligence?",
+    "gold_ids": [
+      "8607"
+    ]
+  },
+  {
+    "query": "What did the article on Geometric Algorithms for Translucency Sorting in Minecraft [pdf] report?",
+    "gold_ids": []
+  },
+  {
+    "query": "What is the significance of 39c3 Fahrplan (Schedule) in AI?",
+    "gold_ids": []
+  },
+  {
+    "query": "What problem does Open-Source Text Generation & LLM Ecosystem at Hugging Face address?",
+    "gold_ids": [
+      "7439"
+    ]
+  },
+  {
+    "query": "What are the key details about Hugging Face Text Generation Inference available for AWS Inferentia2?",
+    "gold_ids": [
+      "5951",
+      "6543",
+      "5952",
+      "5954",
+      "5953"
+    ]
+  },
+  {
+    "query": "How does Falcon-Edge: A series of powerful, universal, fine-tunable 1.58bit language models. work?",
+    "gold_ids": [
+      "3616",
+      "3619"
+    ]
+  },
+  {
+    "query": "What is the update regarding Llama 3.1 - 405B, 70B & 8B with multilinguality and long context?",
+    "gold_ids": [
+      "5574"
+    ]
+  },
+  {
+    "query": "Why is 2024 Security Feature Highlights important?",
+    "gold_ids": [
+      "5520"
+    ]
+  },
+  {
+    "query": "What did researchers say about Casting a SPELL: Sentence Pairing Exploration for LLM Limitation-breaking?",
+    "gold_ids": [
+      "8719"
+    ]
+  }
+]

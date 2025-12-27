@@ -1,0 +1,2015 @@
+{
+  "summary": {
+    "baseline": {
+      "recall@10": 0.6416666666666667,
+      "recall@20": 0.65,
+      "precision@10": 0.11000000000000001,
+      "mrr": 0.5372222222222223,
+      "ndcg@10": 0.5659062790831157
+    },
+    "system": {
+      "recall@10": 0.5033333333333333,
+      "recall@20": 0.5033333333333333,
+      "precision@10": 0.08333333333333334,
+      "mrr": 0.46388888888888885,
+      "ndcg@10": 0.46107569677340393
+    }
+  },
+  "confidence_intervals": {
+    "baseline": {
+      "recall@10": {
+        "low": 0.483125,
+        "high": 0.8166666666666667
+      },
+      "recall@20": {
+        "low": 0.48333333333333334,
+        "high": 0.8333333333333334
+      },
+      "precision@10": {
+        "low": 0.07,
+        "high": 0.16
+      },
+      "mrr": {
+        "low": 0.37444444444444447,
+        "high": 0.7050138888888888
+      },
+      "ndcg@10": {
+        "low": 0.4067414286381219,
+        "high": 0.7343812880391749
+      }
+    },
+    "system": {
+      "recall@10": {
+        "low": 0.33666666666666667,
+        "high": 0.6667499999999998
+      },
+      "recall@20": {
+        "low": 0.33666666666666667,
+        "high": 0.6667499999999998
+      },
+      "precision@10": {
+        "low": 0.05000000000000002,
+        "high": 0.1234166666666666
+      },
+      "mrr": {
+        "low": 0.3,
+        "high": 0.6361111111111111
+      },
+      "ndcg@10": {
+        "low": 0.30089583411612,
+        "high": 0.619806349533786
+      }
+    }
+  },
+  "per_query": [
+    {
+      "query": "What is Powerful ASR + diarization + speculative decoding with Hugging Face Inference Endpoints about?",
+      "gold_ids": [
+        "6066",
+        "6070"
+      ],
+      "bm25": {
+        "top_ids": [
+          "6066",
+          "6070",
+          "6073",
+          "6067",
+          "6071",
+          "4952",
+          "5144",
+          "5188",
+          "6955",
+          "6072",
+          "5279",
+          "6068",
+          "4951",
+          "7469",
+          "3636",
+          "6766",
+          "6155",
+          "5195",
+          "5900",
+          "4958"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.2,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "6066",
+          "6182",
+          "3631",
+          "7469",
+          "2804",
+          "5970",
+          "5971",
+          "5028"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 0.5,
+          "recall@20": 0.5,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 0.6131471927654584
+        }
+      },
+      "delta": {
+        "recall@10": -0.5,
+        "recall@20": -0.5,
+        "precision@10": -0.1,
+        "mrr": 0.0,
+        "ndcg@10": -0.38685280723454163
+      }
+    },
+    {
+      "query": "What are the main points in Correspondence Between Don Knuth and Peter van Emde Boas on Priority Deques 1977 [pdf]?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "3898",
+          "11412",
+          "3897",
+          "3454",
+          "5985",
+          "11382",
+          "2529",
+          "8455",
+          "2405",
+          "3894",
+          "5849",
+          "5691",
+          "5226",
+          "2326",
+          "4335",
+          "3896",
+          "7122",
+          "4346",
+          "3264",
+          "4484"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "1812",
+          "2003",
+          "1586",
+          "1534",
+          "1954",
+          "1917",
+          "1527",
+          "1538"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What did the article on Training and Finetuning Sparse Embedding Models with Sentence Transformers v5 report?",
+      "gold_ids": [
+        "3920",
+        "3297",
+        "3319",
+        "3299"
+      ],
+      "bm25": {
+        "top_ids": [
+          "3292",
+          "5917",
+          "3920",
+          "3919",
+          "3297",
+          "4564",
+          "4559",
+          "3319",
+          "2091",
+          "4568",
+          "3299",
+          "3316",
+          "3304",
+          "3309",
+          "2641",
+          "3301",
+          "3300",
+          "6427",
+          "3294",
+          "4587"
+        ],
+        "first_gold_rank": 3,
+        "metrics": {
+          "recall@10": 0.75,
+          "recall@20": 1.0,
+          "precision@10": 0.3,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.4693608375942211
+        }
+      },
+      "system": {
+        "top_ids": [
+          "3292",
+          "3316",
+          "3304",
+          "3297",
+          "3319",
+          "3294",
+          "3300",
+          "5917"
+        ],
+        "first_gold_rank": 4,
+        "metrics": {
+          "recall@10": 0.5,
+          "recall@20": 0.5,
+          "precision@10": 0.2,
+          "mrr": 0.25,
+          "ndcg@10": 0.3191471544989227
+        }
+      },
+      "delta": {
+        "recall@10": -0.25,
+        "recall@20": -0.5,
+        "precision@10": -0.09999999999999998,
+        "mrr": -0.08333333333333331,
+        "ndcg@10": -0.15021368309529837
+      }
+    },
+    {
+      "query": "What is the significance of Train 400x faster Static Embedding Models with Sentence Transformers in AI?",
+      "gold_ids": [
+        "4559"
+      ],
+      "bm25": {
+        "top_ids": [
+          "4559",
+          "4564",
+          "4574",
+          "4568",
+          "4573",
+          "3935",
+          "4608",
+          "4607",
+          "5917",
+          "4606",
+          "6427",
+          "3926",
+          "4603",
+          "3054",
+          "6430",
+          "6250",
+          "2644",
+          "6424",
+          "4609",
+          "6428"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "4559",
+          "4564",
+          "4608",
+          "4574",
+          "4568",
+          "4573",
+          "4603",
+          "4606"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What problem does Granite 4.0 Nano: Just how small can you go? address?",
+      "gold_ids": [
+        "2040",
+        "2041",
+        "2042"
+      ],
+      "bm25": {
+        "top_ids": [
+          "2040",
+          "2041",
+          "11119",
+          "2042",
+          "322",
+          "11015",
+          "6883",
+          "3477",
+          "8189",
+          "10913",
+          "2475",
+          "2576",
+          "5073",
+          "10933",
+          "7308",
+          "27",
+          "3875",
+          "6490",
+          "36",
+          "5620"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.3,
+          "mrr": 1.0,
+          "ndcg@10": 0.9674679834891693
+        }
+      },
+      "system": {
+        "top_ids": [
+          "2040",
+          "2041",
+          "2042",
+          "2297",
+          "322",
+          "8189",
+          "33",
+          "10933"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.3,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.03253201651083071
+      }
+    },
+    {
+      "query": "What are the key details about Correspondence Between Don Knuth and Peter van Emde Boas on Priority Deques 1977 [pdf]?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "11412",
+          "3898",
+          "11382",
+          "10864",
+          "3897",
+          "4231",
+          "9233",
+          "3894",
+          "5539",
+          "6961",
+          "3454",
+          "10869",
+          "2326",
+          "7338",
+          "8014",
+          "8728",
+          "3401",
+          "3489",
+          "11286",
+          "11418"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "1812",
+          "2003",
+          "1586",
+          "1534",
+          "1954",
+          "1917",
+          "1527",
+          "1538"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "How does Correspondence Between Don Knuth and Peter van Emde Boas on Priority Deques 1977 [pdf] work?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "3898",
+          "4231",
+          "11412",
+          "7428",
+          "3896",
+          "6886",
+          "4384",
+          "3894",
+          "3897",
+          "11417",
+          "11172",
+          "2802",
+          "11120",
+          "6486",
+          "8728",
+          "3828",
+          "2304",
+          "11382",
+          "4611",
+          "11282"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "1812",
+          "2003",
+          "1586",
+          "1534",
+          "1954",
+          "1917",
+          "1527",
+          "1538"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What is the update regarding Project Dropstone: A Neuro-Symbolic Runtime for Long-Horizon Engineering [pdf]?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "8541",
+          "409",
+          "8452",
+          "8881",
+          "3249",
+          "8453",
+          "143",
+          "400",
+          "8471",
+          "3495",
+          "11426",
+          "11421",
+          "11422",
+          "3072",
+          "3026",
+          "3515",
+          "2338",
+          "5909",
+          "2983",
+          "8731"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "8954",
+          "8955",
+          "8956",
+          "8961",
+          "8962",
+          "8963",
+          "9115",
+          "8958"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "Why is ChainReaction: Causal Chain-Guided Reasoning for Modular and Explainable Causal-Why Video Question Answering important?",
+      "gold_ids": [
+        "8827"
+      ],
+      "bm25": {
+        "top_ids": [
+          "8827",
+          "11391",
+          "5228",
+          "5212",
+          "4968",
+          "8765",
+          "8766",
+          "6094",
+          "8828",
+          "5205",
+          "7428",
+          "11390",
+          "6097",
+          "132",
+          "11191",
+          "3539",
+          "5227",
+          "7440",
+          "4537",
+          "2875"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "8827",
+          "4968",
+          "6097",
+          "5212",
+          "6094",
+          "6095",
+          "5279",
+          "5205"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What did researchers say about Welcome Mixtral - a SOTA Mixture of Experts on Hugging Face?",
+      "gold_ids": [
+        "6818"
+      ],
+      "bm25": {
+        "top_ids": [
+          "6805",
+          "3871",
+          "6817",
+          "6818",
+          "6838",
+          "6508",
+          "3776",
+          "6810",
+          "6814",
+          "6811",
+          "7757",
+          "6839",
+          "6808",
+          "4995",
+          "2158",
+          "6509",
+          "2683",
+          "3645",
+          "3413",
+          "6837"
+        ],
+        "first_gold_rank": 4,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 0.25,
+          "ndcg@10": 0.43067655807339306
+        }
+      },
+      "system": {
+        "top_ids": [
+          "6805",
+          "6817",
+          "6810",
+          "6811",
+          "6814",
+          "6808",
+          "3871",
+          "6508"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": -1.0,
+        "recall@20": -1.0,
+        "precision@10": -0.1,
+        "mrr": -0.25,
+        "ndcg@10": -0.43067655807339306
+      }
+    },
+    {
+      "query": "What is Correspondence Between Don Knuth and Peter van Emde Boas on Priority Deques 1977 [pdf] about?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "3898",
+          "11382",
+          "3489",
+          "8701",
+          "3897",
+          "3894",
+          "4231",
+          "11412",
+          "11286",
+          "11466",
+          "8777",
+          "357",
+          "5226",
+          "3896",
+          "9233",
+          "11282",
+          "11417",
+          "8290",
+          "4484",
+          "8751"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "1812",
+          "2003",
+          "1586",
+          "1534",
+          "1954",
+          "1917",
+          "1527",
+          "1538"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What are the main points in Project Dropstone: A Neuro-Symbolic Runtime for Long-Horizon Engineering [pdf]?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "8541",
+          "409",
+          "8452",
+          "143",
+          "8881",
+          "3249",
+          "400",
+          "8453",
+          "3072",
+          "8731",
+          "8471",
+          "4098",
+          "4523",
+          "7122",
+          "2983",
+          "12285",
+          "8002",
+          "12361",
+          "3178",
+          "5691"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "8954",
+          "8955",
+          "8956",
+          "8961",
+          "8962",
+          "8963",
+          "9115",
+          "8958"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What did the article on Remote VAEs for decoding with Inference Endpoints \ud83e\udd17 report?",
+      "gold_ids": [
+        "4159"
+      ],
+      "bm25": {
+        "top_ids": [
+          "4159",
+          "4160",
+          "4162",
+          "6066",
+          "7659",
+          "6946",
+          "5144",
+          "5195",
+          "6955",
+          "6854",
+          "6528",
+          "6073",
+          "5728",
+          "4486",
+          "6956",
+          "4865",
+          "7469",
+          "4422",
+          "7656",
+          "4864"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "4159",
+          "4160",
+          "4162",
+          "6066",
+          "7659",
+          "6070",
+          "6073",
+          "6946"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What is the significance of Geometric Algorithms for Translucency Sorting in Minecraft [pdf] in AI?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "6207",
+          "3539",
+          "365",
+          "7972",
+          "4295",
+          "7971",
+          "2141",
+          "8228",
+          "3146",
+          "8686",
+          "8460",
+          "2154",
+          "8394",
+          "7111",
+          "11419",
+          "5141",
+          "8471",
+          "6399",
+          "285",
+          "3512"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "9524",
+          "9461",
+          "9969",
+          "10652",
+          "9605",
+          "10463",
+          "9675",
+          "10282"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What problem does Learning Treatment Policies From Multimodal Electronic Health Records address?",
+      "gold_ids": [
+        "3999"
+      ],
+      "bm25": {
+        "top_ids": [
+          "3999",
+          "8520",
+          "2697",
+          "8599",
+          "3990",
+          "8747",
+          "10946",
+          "2386",
+          "6114",
+          "2145",
+          "401",
+          "8676",
+          "400",
+          "2256",
+          "4079",
+          "4505",
+          "8550",
+          "8375",
+          "2376",
+          "8422"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "3999",
+          "8520",
+          "2697",
+          "8599",
+          "3990",
+          "10946",
+          "2145",
+          "6114"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What are the key details about \"She's Like a Person but Better\": Characterizing Companion-Assistant Dynamics in Human-AI Relationships?",
+      "gold_ids": [
+        "4265"
+      ],
+      "bm25": {
+        "top_ids": [
+          "4265",
+          "8345",
+          "7839",
+          "7830",
+          "11498",
+          "5035",
+          "7628",
+          "4626",
+          "11033",
+          "7151",
+          "11272",
+          "6961",
+          "8682",
+          "6808",
+          "8728",
+          "7832",
+          "11469",
+          "7838",
+          "2882",
+          "2885"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "4265",
+          "8345",
+          "4626",
+          "11272",
+          "7628",
+          "7839",
+          "8682",
+          "2883"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "How does WWDC 24: Running Mistral 7B with Core ML work?",
+      "gold_ids": [
+        "5605",
+        "5600",
+        "5611",
+        "5599"
+      ],
+      "bm25": {
+        "top_ids": [
+          "5598",
+          "5605",
+          "5600",
+          "5599",
+          "5611",
+          "7595",
+          "6525",
+          "5497",
+          "5612",
+          "5606",
+          "5601",
+          "7597",
+          "7333",
+          "3909",
+          "6915",
+          "6918",
+          "5498",
+          "6437",
+          "7083",
+          "7598"
+        ],
+        "first_gold_rank": 2,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.4,
+          "mrr": 0.5,
+          "ndcg@10": 0.7606395682357036
+        }
+      },
+      "system": {
+        "top_ids": [
+          "5598",
+          "5605",
+          "5600",
+          "5611",
+          "5612",
+          "7595",
+          "5599",
+          "11391"
+        ],
+        "first_gold_rank": 2,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.4,
+          "mrr": 0.5,
+          "ndcg@10": 0.7397466333385988
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": -0.020892934897104753
+      }
+    },
+    {
+      "query": "What is the update regarding Rocket Money x Hugging Face: Scaling Volatile ML Models in Production\u200b?",
+      "gold_ids": [
+        "7105",
+        "7103"
+      ],
+      "bm25": {
+        "top_ids": [
+          "7098",
+          "7105",
+          "7106",
+          "7103",
+          "6955",
+          "7486",
+          "7102",
+          "6234",
+          "7321",
+          "6155",
+          "7314",
+          "7736",
+          "7691",
+          "7383",
+          "5519",
+          "7414",
+          "5495",
+          "6233",
+          "6277",
+          "6160"
+        ],
+        "first_gold_rank": 2,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.2,
+          "mrr": 0.5,
+          "ndcg@10": 0.6509209298071326
+        }
+      },
+      "system": {
+        "top_ids": [
+          "7098",
+          "6182",
+          "3631",
+          "7469",
+          "2804",
+          "5970",
+          "5971",
+          "5028"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": -1.0,
+        "recall@20": -1.0,
+        "precision@10": -0.2,
+        "mrr": -0.5,
+        "ndcg@10": -0.6509209298071326
+      }
+    },
+    {
+      "query": "Why is Fabrice Bellard: Biography [pdf] important?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "6503",
+          "7486",
+          "3539",
+          "7025",
+          "5910",
+          "4257",
+          "7428",
+          "11015",
+          "4224",
+          "11419",
+          "8523",
+          "11422",
+          "11423",
+          "7109",
+          "5618",
+          "7744",
+          "7173",
+          "3632",
+          "7189",
+          "7743"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "7969",
+          "7915",
+          "7905",
+          "7949",
+          "7943",
+          "7918",
+          "7931",
+          "7877"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What did researchers say about Welcome aMUSEd: Efficient Text-to-Image Generation?",
+      "gold_ids": [
+        "6740"
+      ],
+      "bm25": {
+        "top_ids": [
+          "6736",
+          "6738",
+          "6740",
+          "6741",
+          "6737",
+          "6739",
+          "4413",
+          "3871",
+          "4416",
+          "4765",
+          "107",
+          "7859",
+          "7856",
+          "5895",
+          "4194",
+          "7757",
+          "4455",
+          "5290",
+          "6371",
+          "6167"
+        ],
+        "first_gold_rank": 3,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.5
+        }
+      },
+      "system": {
+        "top_ids": [
+          "6736",
+          "6738",
+          "6740",
+          "6742",
+          "6741",
+          "6737",
+          "6739",
+          "3871"
+        ],
+        "first_gold_rank": 3,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.5
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What is A Knapsack Public Key Cryptosystem Based on Arithmetic in Finite Fields (1988) [pdf] about?",
+      "gold_ids": [
+        "12252"
+      ],
+      "bm25": {
+        "top_ids": [
+          "12252",
+          "8087",
+          "8056",
+          "11418",
+          "12354",
+          "9284",
+          "11111",
+          "8683",
+          "2533",
+          "3162",
+          "2266",
+          "11423",
+          "4062",
+          "8852",
+          "10866",
+          "4796",
+          "11110",
+          "4295",
+          "9274",
+          "383"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "12245",
+          "12023",
+          "11848",
+          "11604",
+          "11946",
+          "12014",
+          "11616",
+          "12016"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": -1.0,
+        "recall@20": -1.0,
+        "precision@10": -0.1,
+        "mrr": -1.0,
+        "ndcg@10": -1.0
+      }
+    },
+    {
+      "query": "What are the main points in NVIDIA Nemotron 3: Efficient and Open Intelligence?",
+      "gold_ids": [
+        "8607"
+      ],
+      "bm25": {
+        "top_ids": [
+          "8607",
+          "3328",
+          "3338",
+          "33",
+          "2745",
+          "2744",
+          "2075",
+          "2871",
+          "2178",
+          "42",
+          "2874",
+          "2872",
+          "3331",
+          "37",
+          "4890",
+          "36",
+          "2173",
+          "3335",
+          "5691",
+          "5560"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "8607",
+          "3328",
+          "3338",
+          "2872",
+          "3331",
+          "33",
+          "2871",
+          "2744"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What did the article on Geometric Algorithms for Translucency Sorting in Minecraft [pdf] report?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "11412",
+          "5099",
+          "8328",
+          "11414",
+          "12297",
+          "6875",
+          "11426",
+          "8471",
+          "3967",
+          "3512",
+          "8228",
+          "4295",
+          "6480",
+          "59",
+          "8460",
+          "8348",
+          "4508",
+          "4009",
+          "8686",
+          "8507"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "10783",
+          "9734",
+          "9446",
+          "9871",
+          "9779",
+          "9401",
+          "10294",
+          "10216"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What is the significance of 39c3 Fahrplan (Schedule) in AI?",
+      "gold_ids": [],
+      "bm25": {
+        "top_ids": [
+          "8119",
+          "7971",
+          "7972",
+          "8114",
+          "7975",
+          "8044",
+          "2154",
+          "2183",
+          "8118",
+          "6737",
+          "3788",
+          "2569",
+          "8201",
+          "4614",
+          "3896",
+          "4618",
+          "5194",
+          "5226",
+          "7392",
+          "6818"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "9301",
+          "9293",
+          "9298",
+          "9294",
+          "9290",
+          "9291",
+          "9297",
+          "9296"
+        ],
+        "first_gold_rank": null,
+        "metrics": {
+          "recall@10": 0.0,
+          "recall@20": 0.0,
+          "precision@10": 0.0,
+          "mrr": 0.0,
+          "ndcg@10": 0.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What problem does Open-Source Text Generation & LLM Ecosystem at Hugging Face address?",
+      "gold_ids": [
+        "7439"
+      ],
+      "bm25": {
+        "top_ids": [
+          "7439",
+          "7680",
+          "7079",
+          "5907",
+          "7524",
+          "4555",
+          "6010",
+          "6446",
+          "7652",
+          "7442",
+          "7447",
+          "3611",
+          "6725",
+          "2804",
+          "6543",
+          "4798",
+          "7825",
+          "5597",
+          "6049",
+          "7742"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "7447",
+          "7439",
+          "5907",
+          "7442",
+          "7680",
+          "4555",
+          "7079",
+          "5597"
+        ],
+        "first_gold_rank": 2,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 0.5,
+          "ndcg@10": 0.6309297535714575
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": -0.5,
+        "ndcg@10": -0.36907024642854247
+      }
+    },
+    {
+      "query": "What are the key details about Hugging Face Text Generation Inference available for AWS Inferentia2?",
+      "gold_ids": [
+        "5951",
+        "6543",
+        "5952",
+        "5954",
+        "5953"
+      ],
+      "bm25": {
+        "top_ids": [
+          "6543",
+          "5951",
+          "5952",
+          "6893",
+          "5954",
+          "6897",
+          "6551",
+          "5953",
+          "6544",
+          "5591",
+          "7296",
+          "6546",
+          "7279",
+          "5882",
+          "5028",
+          "7079",
+          "4030",
+          "6545",
+          "7680",
+          "6131"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.5,
+          "mrr": 1.0,
+          "ndcg@10": 0.9609247825245575
+        }
+      },
+      "system": {
+        "top_ids": [
+          "6543",
+          "5951",
+          "5952",
+          "6551",
+          "6897",
+          "5591",
+          "6544",
+          "6546"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 0.6,
+          "recall@20": 0.6,
+          "precision@10": 0.3,
+          "mrr": 1.0,
+          "ndcg@10": 0.7227265726449519
+        }
+      },
+      "delta": {
+        "recall@10": -0.4,
+        "recall@20": -0.4,
+        "precision@10": -0.2,
+        "mrr": 0.0,
+        "ndcg@10": -0.2381982098796056
+      }
+    },
+    {
+      "query": "How does Falcon-Edge: A series of powerful, universal, fine-tunable 1.58bit language models. work?",
+      "gold_ids": [
+        "3616",
+        "3619"
+      ],
+      "bm25": {
+        "top_ids": [
+          "3614",
+          "3623",
+          "4766",
+          "3618",
+          "3616",
+          "5937",
+          "3564",
+          "5362",
+          "4765",
+          "3615",
+          "3562",
+          "3639",
+          "3572",
+          "3580",
+          "7445",
+          "2101",
+          "7442",
+          "7444",
+          "6169",
+          "5385"
+        ],
+        "first_gold_rank": 5,
+        "metrics": {
+          "recall@10": 0.5,
+          "recall@20": 0.5,
+          "precision@10": 0.1,
+          "mrr": 0.2,
+          "ndcg@10": 0.23719771276929622
+        }
+      },
+      "system": {
+        "top_ids": [
+          "3623",
+          "3614",
+          "3616",
+          "3618",
+          "3615",
+          "3621",
+          "4766",
+          "3564"
+        ],
+        "first_gold_rank": 3,
+        "metrics": {
+          "recall@10": 0.5,
+          "recall@20": 0.5,
+          "precision@10": 0.1,
+          "mrr": 0.3333333333333333,
+          "ndcg@10": 0.3065735963827292
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.1333333333333333,
+        "ndcg@10": 0.06937588361343297
+      }
+    },
+    {
+      "query": "What is the update regarding Llama 3.1 - 405B, 70B & 8B with multilinguality and long context?",
+      "gold_ids": [
+        "5574"
+      ],
+      "bm25": {
+        "top_ids": [
+          "5574",
+          "5576",
+          "5575",
+          "5580",
+          "6125",
+          "5449",
+          "5590",
+          "5592",
+          "5283",
+          "5589",
+          "5577",
+          "5033",
+          "4883",
+          "5579",
+          "5578",
+          "5465",
+          "6124",
+          "2871",
+          "5013",
+          "5564"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "5574",
+          "5590",
+          "5576",
+          "6125",
+          "7247",
+          "5456",
+          "5449"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "Why is 2024 Security Feature Highlights important?",
+      "gold_ids": [
+        "5520"
+      ],
+      "bm25": {
+        "top_ids": [
+          "5520",
+          "7745",
+          "5044",
+          "10970",
+          "4129",
+          "6650",
+          "7743",
+          "4992",
+          "3774",
+          "5172",
+          "7744",
+          "5256",
+          "12283",
+          "12280",
+          "5116",
+          "8898",
+          "11110",
+          "271",
+          "3857",
+          "8682"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "5520",
+          "5527",
+          "7745",
+          "4652",
+          "10970",
+          "3857",
+          "3774",
+          "5905"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    },
+    {
+      "query": "What did researchers say about Casting a SPELL: Sentence Pairing Exploration for LLM Limitation-breaking?",
+      "gold_ids": [
+        "8719"
+      ],
+      "bm25": {
+        "top_ids": [
+          "8719",
+          "2045",
+          "8476",
+          "5179",
+          "6581",
+          "3231",
+          "6416",
+          "5650",
+          "6450",
+          "3599",
+          "7757",
+          "4967",
+          "8087",
+          "2088",
+          "5393",
+          "6608",
+          "8671",
+          "5036",
+          "12298",
+          "3575"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "system": {
+        "top_ids": [
+          "8719",
+          "8476",
+          "3231",
+          "8812",
+          "6608",
+          "2090",
+          "2045",
+          "3575"
+        ],
+        "first_gold_rank": 1,
+        "metrics": {
+          "recall@10": 1.0,
+          "recall@20": 1.0,
+          "precision@10": 0.1,
+          "mrr": 1.0,
+          "ndcg@10": 1.0
+        }
+      },
+      "delta": {
+        "recall@10": 0.0,
+        "recall@20": 0.0,
+        "precision@10": 0.0,
+        "mrr": 0.0,
+        "ndcg@10": 0.0
+      }
+    }
+  ],
+  "notes": {
+    "used_doc_ids": false,
+    "extracted_from_text": false,
+    "doc_level": false
+  }
+}
