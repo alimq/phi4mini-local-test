@@ -24,20 +24,14 @@ Run context (from `eval/graphrag_eval/RUN.md`):
 
 Query set used: `eval/graphrag_eval/queries_labeled.json` (30 labeled queries).
 
-## Benchmark: GraphRAG vs BM25 on AI news
-
-This repo includes a retrieval benchmark comparing GraphRAG vs BM25.
+## Benchmark details / artifacts
 
 Files:
 - `eval/graphrag_eval/report.md`
 - `eval/graphrag_eval/report.json`
 - `eval/graphrag_eval/queries_labeled.json`
 - `eval/graphrag_eval/queries_answerable.json`
-
-Key facts from the benchmark files:
-- Query count: 30 labeled queries (`queries_labeled.json`).
-- TopK used: 20 (`report.md`).
-- GraphRAG mapping notes: `{"used_doc_ids": false, "extracted_from_text": false, "doc_level": false}` (`report.json`).
+- `eval/graphrag_eval/RUN.md`
 
 Summary metrics (from `report.md`):
 
@@ -45,12 +39,13 @@ Summary metrics (from `report.md`):
 |---|---:|---:|---:|---:|---:|---:|
 | recall@10 | 0.6417 | 0.5033 | -0.1383 | -21.56% | [0.4831, 0.8167] | [0.3367, 0.6667] |
 | recall@20 | 0.6500 | 0.5033 | -0.1467 | -22.56% | [0.4833, 0.8333] | [0.3367, 0.6667] |
-| mrr | 0.5372 | 0.4639 | -0.0733 | -13.65% | [0.3744, 0.7050] | [0.3000, 0.6361] |
-| ndcg@10 | 0.5659 | 0.4611 | -0.1048 | -18.52% | [0.4067, 0.7344] | [0.3009, 0.6198] |
+| MRR | 0.5372 | 0.4639 | -0.0733 | -13.65% | [0.3744, 0.7050] | [0.3000, 0.6361] |
+| nDCG@10 | 0.5659 | 0.4611 | -0.1048 | -18.52% | [0.4067, 0.7344] | [0.3009, 0.6198] |
 | precision@10 | 0.1100 | 0.0833 | -0.0267 | -24.24% | [0.0700, 0.1600] | [0.0500, 0.1234] |
 
-Per-query excerpts (from `report.md`, top 3 worst for GraphRAG):
+## Appendix
 
+Per-query excerpts (from `report.md`, selected queries):
 - Query: What did researchers say about Welcome Mixtral - a SOTA Mixture of Experts on Hugging Face?
   - Gold IDs: 6818
   - BM25 top10: 6805, 3871, 6817, 6818, 6838, 6508, 3776, 6810, 6814, 6811 (first gold rank: 4)
